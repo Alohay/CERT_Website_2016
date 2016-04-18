@@ -7,7 +7,7 @@ return array(
     'DB_HOST' => 'localhost',
     'DB_NAME' => 'cert_website_2016',
     'DB_USER' => 'root',
-    'DB_PWD' => '123456',
+    'DB_PWD' => '(89346',
     'DB_PORT' => '3306',
     'DB_PREFIX' => 'cmf_',
     //密钥

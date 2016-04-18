@@ -1,0 +1,7 @@
+[ 2016-04-18T23:10:30+08:00 ] ::1 /1/CERT_Website_2016/web/back-end/index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001944s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006278s ]
+NOTIC: [8] Undefined index: url D:\lenove\Study\PHP\wamp\www\1\CERT_Website_2016\web\back-end\application\Common\Controller\AppframeController.class.php 第 24 行.
+

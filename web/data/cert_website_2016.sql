@@ -40,23 +40,26 @@ CREATE TABLE `cmf_ad` (
 --
 
 CREATE TABLE `cmf_application` (
-  `id` tinyint(2) UNSIGNED NOT NULL,
+  `id` tinyint(2) unsigned NOT NULL AUTO_INCREMENT,
   `student_id` varchar(16) NOT NULL DEFAULT '' COMMENT '学号',
   `username` varchar(10) NOT NULL DEFAULT '' COMMENT '姓名',
   `classname` varchar(16) NOT NULL DEFAULT '' COMMENT '班级',
+  `email` varchar(25) NOT NULL DEFAULT '' COMMENT '电子邮箱',
+  `phonenumber` char(11) NOT NULL COMMENT '手机号码',
   `introduction` varchar(255) NOT NULL DEFAULT '' COMMENT '自我介绍',
   `department_id` tinyint(2) NOT NULL COMMENT '意向部门id',
-  `pass` bit(1) NOT NULL DEFAULT b'0' COMMENT '是否通过 0:未通过;1:已通过',
+  `pass` bit(1) NOT NULL DEFAULT 0 COMMENT '面试是否通过 0:未通过;1:已通过',
+  `check` bit(1) NOT NULL DEFAULT 0 COMMENT '考核是否通过 0:未通过;1:已通过',
   `create_time` datetime NOT NULL COMMENT '创建时间',
-  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='新人报名表';
-
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='新人报名表';
 --
 -- Dumping data for table `cmf_application`
 --
 
-INSERT INTO `cmf_application` (`id`, `student_id`, `username`, `classname`, `introduction`, `department_id`, `pass`, `create_time`, `update_time`) VALUES
-(1, '2015211001001005', '韩睿', '15-软工10', '自带两部wp的大水比', 17, b'0', '2016-04-17 00:00:00', '2016-04-17 13:29:46');
+INSERT INTO `cmf_application` (`id`, `student_id`, `username`, `classname`, `introduction`, `department_id`, `pass`, `create_time`, `update_time`,`email`,`phonenumber`) VALUES
+(1, '2015211001001005', '韩睿', '15-软工10', '自带两部wp的大水比', 17, b'0', '2016-04-17 00:00:00', '2016-04-17 13:29:46','1@qq.com','12345678901');
 
 -- --------------------------------------------------------
 
